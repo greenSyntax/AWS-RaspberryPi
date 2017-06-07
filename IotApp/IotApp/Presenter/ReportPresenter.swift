@@ -43,9 +43,12 @@ class ReportPresenter{
         
         for dataum in data{
         
-            charts.temperatureLog.append(getFloat(value: dataum.temperature!))
-            charts.humidityLog.append(getFloat(value: dataum.humidity!))
-            charts.pressureLog.append(getFloat(value: dataum.pressure!))
+            if let temp = dataum.temperature, let humdidty = dataum.humidity, let pressure = dataum.pressure{
+             
+                charts.temperatureLog.append(getFloat(value: temp))
+                charts.humidityLog.append(getFloat(value: humdidty))
+                charts.pressureLog.append(getFloat(value: pressure))
+            }
         }
         
         return charts
@@ -58,11 +61,15 @@ class ReportPresenter{
         for dataum in data{
             
             var viewModel = ReportViewModel()
-            viewModel.temperature = getTwoPlacesDecimal(value: dataum.temperature!)
-            viewModel.humidity = getTwoPlacesDecimal(value: dataum.humidity!)
-            viewModel.pressure = getTwoPlacesDecimal(value: dataum.pressure!)
-            viewModel.dateOfRecord = DateHelper.getRawDate(dataum.createddate ?? "")
-            arrayOfViewModel.append(viewModel)
+            
+            if let temp = dataum.temperature, let humidty = dataum.humidity, let pressure = dataum.pressure{
+             
+                viewModel.temperature = getTwoPlacesDecimal(value: temp)
+                viewModel.humidity = getTwoPlacesDecimal(value: humidty)
+                viewModel.pressure = getTwoPlacesDecimal(value: pressure)
+                viewModel.dateOfRecord = DateHelper.getRawDate(dataum.createddate ?? "")
+                arrayOfViewModel.append(viewModel)
+            }
         }
         
         return arrayOfViewModel
@@ -77,10 +84,13 @@ class ReportPresenter{
             
             let data:ReportArrayModel = JSONParserSwift.parse(dictionary: (reportsData as? [String:Any])!)
             
-            let chartData = prepareChartsLog(data: data.envDetails!)
-            let reportData = prepareViewModel(data: data.envDetails!)
-            
-            onSuccess(reportData, chartData)
+            if let data = data.envDetails{
+             
+                let chartData = prepareChartsLog(data: data)
+                let reportData = prepareViewModel(data: data)
+                
+                onSuccess(reportData, chartData)
+            }
     
         }) { (error) in
             
