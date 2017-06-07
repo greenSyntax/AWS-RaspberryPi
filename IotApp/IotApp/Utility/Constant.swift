@@ -23,6 +23,8 @@ struct Constants{
         static let dashboard = "Dashboard"
         static let charts = "Charts"
         static let chartsData = "Charts Data"
+        static let labelTemp = "Temp"
+        static let labelHumidty = ""
         
     }
     

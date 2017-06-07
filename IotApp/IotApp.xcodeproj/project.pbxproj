@@ -26,6 +26,9 @@
 		0713406A1EE7590F009583D4 /* NoData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071340691EE7590F009583D4 /* NoData.xib */; };
 		0713406C1EE75919009583D4 /* NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0713406B1EE75919009583D4 /* NoData.swift */; };
 		0713406E1EE75D02009583D4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0713406D1EE75D02009583D4 /* BaseViewController.swift */; };
+		071340701EE7E8CC009583D4 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0713406F1EE7E8CC009583D4 /* ChartHelper.swift */; };
+		071340721EE883F5009583D4 /* ButtonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071340711EE883F5009583D4 /* ButtonPresenter.swift */; };
+		071340741EE88419009583D4 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071340731EE88419009583D4 /* ButtonViewController.swift */; };
 		3FB3723BD3C1FFEC9144688A /* Pods_IotApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9BBD8E112C1AF3816F53BE /* Pods_IotApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		071340691EE7590F009583D4 /* NoData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoData.xib; sourceTree = "<group>"; };
 		0713406B1EE75919009583D4 /* NoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoData.swift; sourceTree = "<group>"; };
 		0713406D1EE75D02009583D4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0713406F1EE7E8CC009583D4 /* ChartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
+		071340711EE883F5009583D4 /* ButtonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPresenter.swift; sourceTree = "<group>"; };
+		071340731EE88419009583D4 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		1B0A49D727698F0A86A4BD72 /* Pods-IotApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IotApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IotApp/Pods-IotApp.release.xcconfig"; sourceTree = "<group>"; };
 		4F9BBD8E112C1AF3816F53BE /* Pods_IotApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IotApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E492FA212AB11866C5A4DF /* Pods-IotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IotApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IotApp/Pods-IotApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				070E908E1EE70FFE007B38AD /* ChartsViewController.swift */,
 				070E909A1EE723CE007B38AD /* ListViewController.swift */,
 				0713406D1EE75D02009583D4 /* BaseViewController.swift */,
+				071340731EE88419009583D4 /* ButtonViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				071340661EE73F6C009583D4 /* DateHelper.swift */,
+				0713406F1EE7E8CC009583D4 /* ChartHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				070E90A01EE727D1007B38AD /* ReportPresenter.swift */,
+				071340711EE883F5009583D4 /* ButtonPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -245,6 +254,7 @@
 				TargetAttributes = {
 					070E90751EE7079F007B38AD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = S3GTJ8B765;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -344,11 +354,14 @@
 				0713406C1EE75919009583D4 /* NoData.swift in Sources */,
 				071340631EE732A1009583D4 /* ErrorModel.swift in Sources */,
 				0713405E1EE73263009583D4 /* BaseResponse.swift in Sources */,
+				071340741EE88419009583D4 /* ButtonViewController.swift in Sources */,
 				070E908F1EE70FFE007B38AD /* ChartsViewController.swift in Sources */,
 				070E909E1EE72735007B38AD /* ReportTableViewCell.swift in Sources */,
 				0713406E1EE75D02009583D4 /* BaseViewController.swift in Sources */,
 				070E90A31EE72B99007B38AD /* WSManager.swift in Sources */,
+				071340701EE7E8CC009583D4 /* ChartHelper.swift in Sources */,
 				070E90921EE710D1007B38AD /* Constant.swift in Sources */,
+				071340721EE883F5009583D4 /* ButtonPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +485,7 @@
 			baseConfigurationReference = E6E492FA212AB11866C5A4DF /* Pods-IotApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S3GTJ8B765;
 				INFOPLIST_FILE = IotApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movingpin.IotApp;
@@ -485,6 +499,7 @@
 			baseConfigurationReference = 1B0A49D727698F0A86A4BD72 /* Pods-IotApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S3GTJ8B765;
 				INFOPLIST_FILE = IotApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movingpin.IotApp;
