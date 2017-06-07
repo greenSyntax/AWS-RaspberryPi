@@ -27,7 +27,7 @@ class ChartsViewController: UIViewController {
     
     func initializeView(){
         
-        self.navigationItem.title = "Charts Data"
+        self.navigationItem.title = Constants.Litrals.charts
     }
     
     func prepareCharts(){

@@ -22,6 +22,7 @@ struct Constants{
         
         static let dashboard = "Dashboard"
         static let charts = "Charts"
+        static let chartsData = "Charts Data"
         
     }
     
