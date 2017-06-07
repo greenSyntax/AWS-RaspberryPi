@@ -14,7 +14,6 @@
 		070E908F1EE70FFE007B38AD /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E908E1EE70FFE007B38AD /* ChartsViewController.swift */; };
 		070E90921EE710D1007B38AD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E90911EE710D1007B38AD /* Constant.swift */; };
 		070E90941EE710D8007B38AD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E90931EE710D8007B38AD /* Utility.swift */; };
-		070E90991EE71EE4007B38AD /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E90981EE71EE4007B38AD /* ChartHelper.swift */; };
 		070E909B1EE723CE007B38AD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E909A1EE723CE007B38AD /* ListViewController.swift */; };
 		070E909E1EE72735007B38AD /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E909D1EE72735007B38AD /* ReportTableViewCell.swift */; };
 		070E90A11EE727D1007B38AD /* ReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E90A01EE727D1007B38AD /* ReportPresenter.swift */; };
@@ -40,7 +39,6 @@
 		070E908E1EE70FFE007B38AD /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		070E90911EE710D1007B38AD /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		070E90931EE710D8007B38AD /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		070E90981EE71EE4007B38AD /* ChartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		070E909A1EE723CE007B38AD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		070E909D1EE72735007B38AD /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		070E90A01EE727D1007B38AD /* ReportPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPresenter.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 		070E90901EE710C9007B38AD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				070E90981EE71EE4007B38AD /* ChartHelper.swift */,
 				071340661EE73F6C009583D4 /* DateHelper.swift */,
 			);
 			path = Helper;
@@ -338,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				070E90941EE710D8007B38AD /* Utility.swift in Sources */,
-				070E90991EE71EE4007B38AD /* ChartHelper.swift in Sources */,
 				070E909B1EE723CE007B38AD /* ListViewController.swift in Sources */,
 				070E907A1EE7079F007B38AD /* AppDelegate.swift in Sources */,
 				071340621EE732A1009583D4 /* ErrorManager.swift in Sources */,

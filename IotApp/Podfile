@@ -7,7 +7,7 @@ target 'IotApp' do
 
   # Pods for IotApp
   
-  pod 'SwiftChart'
+  pod 'Charts'
   pod 'Alamofire'
   pod 'JSONParserSwift'
   

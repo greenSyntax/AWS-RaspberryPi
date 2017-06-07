@@ -19,9 +19,10 @@ struct ReportViewModel{
 
 struct ChartsData {
     
-    var temperatureLog:[Float] = []
-    var humidityLog:[Float] = []
-    var pressureLog:[Float] = []
+    var temperatureLog:[Double] = []
+    var humidityLog:[Double] = []
+    var pressureLog:[Double] = []
+    var time: [String] = []
 }
 
 class ReportPresenter{
@@ -32,22 +33,27 @@ class ReportPresenter{
         return Double(round(1000 * Double(value))/1000)
     }
     
-    private static func getFloat(value:NSNumber)->Float{
-        
-        return Float(value)
-    }
-    
     private static func prepareChartsLog(data:[ReportModel])->ChartsData{
         
         var charts = ChartsData()
         
         for dataum in data{
         
-            if let temp = dataum.temperature, let humdidty = dataum.humidity, let pressure = dataum.pressure{
+            if let temp = dataum.temperature, let humdidty = dataum.humidity, let pressure = dataum.pressure, let time = dataum.createddate {
              
-                charts.temperatureLog.append(getFloat(value: temp))
-                charts.humidityLog.append(getFloat(value: humdidty))
-                charts.pressureLog.append(getFloat(value: pressure))
+                charts.temperatureLog.append(temp.doubleValue)
+                charts.humidityLog.append(humdidty.doubleValue)
+                charts.pressureLog.append(pressure.doubleValue)
+                
+                if var timestamp = Double(time) {
+                    timestamp = timestamp / 1000
+                    let date = Date(timeIntervalSince1970: timestamp)
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "hh:mm:ss"
+                    
+                    charts.time.append(dateFormatter.string(from: date))
+                }
             }
         }
         

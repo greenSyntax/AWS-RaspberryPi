@@ -1,18 +1,20 @@
 PODS:
   - Alamofire (4.4.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
   - JSONParserSwift (0.4.0)
-  - SwiftChart (0.4.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - JSONParserSwift
-  - SwiftChart
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   JSONParserSwift: 494de8bd748243f08439163e4ff12c0c5e4952b0
-  SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
 
-PODFILE CHECKSUM: 57d63a7360bf322061fb4e72d951f4105e66c976
+PODFILE CHECKSUM: ce7d376a26ffae899db1e5d24410e1e0460b633e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
