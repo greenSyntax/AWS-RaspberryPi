@@ -25,6 +25,10 @@ struct Constants{
         static let chartsData = "Charts Data"
         static let labelTemp = "Temp"
         static let labelHumidty = ""
+        static let onState = "Light is ON"
+        static let offState = "Light is OFF"
+        static let stateButton = "Button Screen"
+        static let on = "on"
         
     }
     
@@ -33,6 +37,11 @@ struct Constants{
         static let responseStatus = "responseStatus"
         static let responseData = "responseData"
         static let getenvdata = "getenvdata"
+        static let getledstate = "getledstate"
+        static let updateEventState = "updatestate"
+        static let state = "state"
+        static let on = "on"
+        static let off = "off"
     }
     
     struct ErrorMessage{
@@ -50,5 +59,7 @@ struct Constants{
         
         //View Cntrollers
         static let chartsViewController = "chartsViewController"
+        static let buttonStateViewController = "buttonStateViewController"
+        static let seperateCharts = "seperateCharts"
     }
 }

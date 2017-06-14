@@ -15,7 +15,7 @@ class DateHelper{
     
     static func getRawDate(_ date:String)->Date? {
         
-        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        formatter.dateFormat = "YYYYMMddHHmmss"
         if let passedDate = formatter.date(from: date){
             
             return passedDate
@@ -25,7 +25,7 @@ class DateHelper{
 
     static func getFormatedDate(date:Date)->String {
         
-        formatter.dateFormat = "EEE,dd MMM,yy"
+        formatter.dateFormat = "EEE,dd MMM,yy hh:mm a"
         
         return formatter.string(from: date as Date)
     }

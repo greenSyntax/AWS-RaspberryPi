@@ -9,7 +9,7 @@
 import UIKit
 
 class ListViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var dataSourceForReports:[ReportViewModel]?
@@ -17,7 +17,7 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         intializeView()
         prepareTabeView()
         prepareList()
@@ -27,7 +27,7 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
         
         self.navigationItem.title = "Dashboard"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,6 +40,13 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
         //To Chart Screen
         navigateToChartScreen()
     }
+    
+    @IBAction func buttonBarSwitchClicked(_ sender: Any) {
+        
+        // Switch Screen
+        navigateToSwitchScreen()
+    }
+    
     
     //MARK:- Tabel View
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -63,10 +70,26 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
         cell.labelTemperature.text = "Temp:"+String(describing: self.dataSourceForReports?[indexPath.row].temperature ?? 0)
         cell.labelHumidity.text = "Humidity:"+String(describing: self.dataSourceForReports?[indexPath.row].humidity ?? 0)
         cell.labelPressure.text = "Pressure:"+String(describing: self.dataSourceForReports?[indexPath.row].pressure ?? 0)
+        cell.labelTime.text = DateHelper.getFormatedDate(date: (self.dataSourceForReports?[indexPath.row].dateOfRecord)!)
+        
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        navigateToSeprateChartScreen()
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     //MARK:- Private Methods
+    fileprivate func navigateToSeprateChartScreen(){
+        
+        let seperateChart = self.storyboard?.instantiateViewController(withIdentifier: Constants.Identifer.seperateCharts) as! SeperateChartViewController
+        seperateChart.data = charts
+        self.navigationController?.pushViewController(seperateChart, animated: true)
+    }
+    
     fileprivate func navigateToChartScreen(){
         
         let chartVc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Identifer.chartsViewController) as! ChartsViewController
@@ -74,9 +97,15 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
         self.navigationController?.pushViewController(chartVc, animated: true)
     }
     
+    fileprivate func navigateToSwitchScreen(){
+        
+        let switchVc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Identifer.buttonStateViewController) as! ButtonViewController
+        self.navigationController?.pushViewController(switchVc, animated: true)
+        
+    }
     
     fileprivate func prepareTabeView(){
-      
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -94,7 +123,7 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
                 self.tableView.backgroundView = NoData.getNoDataView()
             }
             else{
-             
+                
                 
                 self.dataSourceForReports = reports
                 self.charts = chartData
@@ -112,5 +141,5 @@ class ListViewController: BaseViewController, UITableViewDataSource, UITableView
         
     }
     
-
+    
 }

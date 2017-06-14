@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import SwiftChart
 
 class ChartHelper{
     
-    static func getLineChart(){
+    static func getLineChart(data:[Float], chartView:Chart){
         
+        let series = ChartSeries(data)
+        series.color = UIColor.green
+        chartView.add(series)
     }
 }

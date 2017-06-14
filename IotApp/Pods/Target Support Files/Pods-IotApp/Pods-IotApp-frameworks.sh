@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSONParserSwift/JSONParserSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftChart/SwiftChart.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSONParserSwift/JSONParserSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftChart/SwiftChart.framework"
 fi

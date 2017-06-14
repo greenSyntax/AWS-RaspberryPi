@@ -18,6 +18,7 @@ class ReportTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelPressure: UILabel!
     
+    @IBOutlet weak var labelTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
